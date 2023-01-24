@@ -1,0 +1,75 @@
+body{
+  display: flex;
+  justify-content: center;
+  font-family: Georgia, Times, 'Times New Roman', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif serif;
+}
+
+section{
+  padding: 20px;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+img{
+  width: 120px;
+  height: 120px;
+}
+
+.first-day-temperature{
+  font-size: 4rem;
+}
+
+/*permet l'affichage en grand et la séparation avec les autres jours*/
+sup{
+  font-size: 2rem;
+  color: darkblue;
+}
+
+.infos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.next-days{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boldnumber{
+  font-weight: bolder;
+  font-size: 1rem;
+  color: blueviolet;
+}
+
+.temperature{
+  display: grid;
+  place-items: center;
+  gap: 3px;
+}
+
+/* parti du code qui permettra le responsive en dessous de 800px */
+
+@media screen and (min-width: 800px) {
+  .next-days{
+      display: flex;
+      flex-direction: column;
+  }
+  hr{
+      display: none;
+  }
+  .temperature{
+    display: flex;
+    justify-content: center;
+}
+  .next-days{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}
